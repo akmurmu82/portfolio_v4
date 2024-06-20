@@ -8,12 +8,16 @@ export const myTheme = extendTheme({
   },
   fonts: {
     anek: "'Anek Devanagari', sans-serif",
+    subheading: "'Kanit', sans-serif",
+    text: "'Titillium Web', sans-serif",
+
     // Add more font definitions
   },
   button: {
     borderRadius: "30px",
-    padding: "30px 50px",
+    padding: "10px 20px",
     // border: "1px solid"
   },
+
   // Add other theme properties like spacing, breakpoints, etc.
 });

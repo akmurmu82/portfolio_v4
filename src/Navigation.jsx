@@ -5,7 +5,6 @@ import { FaGraduationCap } from "react-icons/fa6";
 import { GrGraphQl } from "react-icons/gr";
 import { GrProjects } from "react-icons/gr";
 import { IoIosMailOpen } from "react-icons/io";
-import { IoSunnySharp } from "react-icons/io5";
 import ThemeToggleButton from "./components/ThemeToggleButton";
 
 function MenuItem({ onClick, icon, isActive }) {

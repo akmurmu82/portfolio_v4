@@ -9,11 +9,11 @@ export default function ThemeToggleButton() {
       position="fixed"
       top={{ base: 5, lg: 10 }}
       right={{ base: 5, lg: 4 }}
-    //   width={{ base: "100%", lg: "50px" }}
+      //   width={{ base: "100%", lg: "50px" }}
       backgroundColor="transparent"
-    //   height={{ base: "auto", lg: "50px" }}
-    //   padding={{ base: 1, lg: 4 }}
-    //   display="flex"
+        // height={{ base: "auto", lg: "50px" }}
+      //   padding={{ base: 1, lg: 4 }}
+      //   display="flex"
       zIndex={10}
       onClick={handleClick}
       isRound={true}
@@ -25,7 +25,7 @@ export default function ThemeToggleButton() {
           <IoSunnySharp />
         </Box>
       }
-        bg={"#333"}
+      bg={"#333"}
       h={"auto"}
     />
   );
