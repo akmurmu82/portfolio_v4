@@ -6,9 +6,9 @@ export default function MyHeading({ title }) {
     <Heading
       fontFamily={theme.fonts.anek}
       as="h2"
-      size={{ base: "xl", lg: "3xl" }}
+      size={{ base: "lg", lg: "3xl" }}
       color={theme.colors.secondary}
-      mb={4}
+      // mb={2}
     >
       {title}
     </Heading>

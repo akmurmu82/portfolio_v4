@@ -5,8 +5,8 @@ import { FaGraduationCap } from "react-icons/fa6";
 import { GrGraphQl } from "react-icons/gr";
 import { GrProjects } from "react-icons/gr";
 import { IoIosMailOpen } from "react-icons/io";
-import { FcAbout } from "react-icons/fc";
 import { IoSunnySharp } from "react-icons/io5";
+import ThemeToggleButton from "./components/ThemeToggleButton";
 
 function MenuItem({ onClick, icon, isActive }) {
   const theme = useTheme();
@@ -69,7 +69,7 @@ function Navigation() {
   return (
     <Box
       position="fixed"
-      bottom={{ base: 0, lg: "auto" }}
+      bottom={{ base: 2, lg: "auto" }}
       right={{ base: 0, lg: 0 }}
       width={{ base: "100%", lg: "auto" }}
       backgroundColor="transparent"
@@ -78,6 +78,7 @@ function Navigation() {
       display="flex"
       zIndex={10}
     >
+      <ThemeToggleButton/>
       <Flex
         listStyleType="none"
         display="flex"
@@ -91,11 +92,6 @@ function Navigation() {
           onClick={() => scrollToSection("home")}
           icon={<FaUser />}
           isActive={activeSection === "home"}
-        />
-        <MenuItem
-          onClick={() => scrollToSection("about")}
-          icon={<FcAbout />}
-          isActive={activeSection === "about"}
         />
         <MenuItem
           onClick={() => scrollToSection("education")}
@@ -117,11 +113,11 @@ function Navigation() {
           icon={<IoIosMailOpen />}
           isActive={activeSection === "contact"}
         />
-        <MenuItem
+        {/* <MenuItem
           onClick={() => scrollToSection("contact")}
           icon={<IoSunnySharp />}
           isActive={activeSection === "toogleTheme"}
-        />
+        /> */}
       </Flex>
     </Box>
   );
