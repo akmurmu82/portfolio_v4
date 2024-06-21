@@ -14,7 +14,6 @@ function App() {
       <div className='App'>
       <Navigation />
       <div id="home"><Home /></div>
-      <div id="about"><About /></div>
       <div id="education"><Education /></div>
       <div id="skills"><Skills /></div>
       <div id="projects"><Projects /></div>

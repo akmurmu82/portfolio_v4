@@ -7,7 +7,7 @@ function Contact() {
       height="100vh"
       display="flex"
       justifyContent="center"
-      alignItems="center"
+      // alignItems="center"
       textAlign="center"
     >
       <Box>

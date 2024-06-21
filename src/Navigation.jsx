@@ -77,7 +77,7 @@ function Navigation() {
       display="flex"
       zIndex={10}
     >
-      <ThemeToggleButton/>
+      <ThemeToggleButton />
       <Flex
         listStyleType="none"
         display="flex"
@@ -112,11 +112,6 @@ function Navigation() {
           icon={<IoIosMailOpen />}
           isActive={activeSection === "contact"}
         />
-        {/* <MenuItem
-          onClick={() => scrollToSection("contact")}
-          icon={<IoSunnySharp />}
-          isActive={activeSection === "toogleTheme"}
-        /> */}
       </Flex>
     </Box>
   );

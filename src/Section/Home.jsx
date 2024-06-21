@@ -12,7 +12,7 @@ function Home() {
         justifyContent="center"
         // p={"50px"}
         // pr={{ base: "20px", lg: "100px" }}
-        alignItems="center"
+        // alignItems="center"
         // bg={"green"}
 
         textAlign="center"
@@ -37,15 +37,15 @@ function Home() {
           <Box maxW={{ base: "100%", lg: "60%" }}>
             <MyHeading title="I'M AMIT KUMAR MURMU" />
             <Text
-              fontFamily={theme.fonts.subheading}
+              fontFamily={theme.fonts.text}
               fontSize={{ base: "2xl", lg: "3xl" }}
-              fontWeight={"bold"}
+              // fontWeight={"bold"}
               mb={4}
             >
               A Software Developer
             </Text>
             <Text
-              fontSize={{ base: "lg", lg: "xl" }}
+              fontSize={{ base: "lg", lg: "23px" }}
               textAlign={"left"}
               fontFamily={theme.fonts.text}
               pr={{ base: "0", lg: 50 }}
@@ -70,7 +70,7 @@ function Home() {
         height="100vh"
         display="flex"
         justifyContent="center"
-        alignItems="center"
+        // alignItems="center"
         textAlign="center"
       >
         <Box>
