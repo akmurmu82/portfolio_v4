@@ -40,6 +40,7 @@ function Home() {
               fontFamily={theme.fonts.text}
               fontSize={{ base: "2xl", lg: "3xl" }}
               // fontWeight={"bold"}
+              
               mb={4}
             >
               A Software Developer
