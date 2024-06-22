@@ -43,13 +43,13 @@ const skillsArr = [
     key: "2",
   },
   {
-    title: "Redux",
-    img: "https://www.bing.com/images/blob?bcid=S-xxyRKkIi0HqxcxoNWLuD9SqbotqVTdP.E",
+    title: "React",
+    img: "https://cdn-icons-png.flaticon.com/128/9440/9440705.png",
     key: "2",
   },
   {
     title: "Chakra-UI",
-    img: "https://www.bing.com/images/blob?bcid=S7t1H2fmbC0HqxcxoNWLuD9SqbotqVTdP-4",
+    img: "https://www.coffeeclass.io/_next/image?url=%2Flogos%2Fchakra-ui.png&w=1920&q=75",
     key: "2",
   },
   {
@@ -59,17 +59,23 @@ const skillsArr = [
   },
   {
     title: "Express",
-    img: "https://www.bing.com/images/blob?bcid=S3-rKskGsS0HqxcxoNWLuD9SqbotqVTdP18",
+    img: "https://th.bing.com/th/id/OIP.Dbbsi4_1MA-1IGQRK894sQAAAA?rs=1&pid=ImgDetMain",
     key: "2",
   },
   {
     title: "MongoDB",
-    img: "https://www.bing.com/images/blob?bcid=S4.TZiIgLy0HqxcxoNWLuD9SqbotqVTdP2c",
+    img: "https://www.bing.com/images/blob?bcid=S4.TZiIgLy0HhxBgCox90Z-Bt-9J.....y8",
     key: "2",
   },
   {
     title: "GitHub",
-    img: "https://www.bing.com/images/blob?bcid=Synw-Bmz8C0HqxcxoNWLuD9SqbotqVTdP-g",
+    img: "https://cdn-icons-png.flaticon.com/128/2504/2504911.png",
+    key: "2",
+  },
+  // <a href="https://www.flaticon.com/free-icons/chat-gpt" title="chat gpt icons">Chat gpt icons created by Freepik - Flaticon</a>,
+  {
+    title: "ChatGPT",
+    img: "https://cdn-icons-png.flaticon.com/128/11865/11865326.png",
     key: "2",
   },
 ];

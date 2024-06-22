@@ -34,7 +34,8 @@ function Home() {
             ml={5}
           />
           <Box maxW={{ base: "100%", lg: "60%" }}>
-            <MyHeading title="I'M AMIT KUMAR MURMU" />
+            <Text as={"h1"} color={theme.colors.secondary} fontFamily={theme.fonts.subheading}>I&apos;M AMIT KUMAR MURMU</Text>
+            {/* <MyHeading title="I'M AMIT KUMAR MURMU" /> */}
             <Text
               fontFamily={theme.fonts.text}
               fontSize={{ base: "2xl", lg: "3xl" }}
@@ -65,21 +66,6 @@ function Home() {
             </Button>
           </Box>
         </Flex>
-      </Box>
-      <Box
-        height="100vh"
-        display="flex"
-        justifyContent="center"
-        // alignItems="center"
-        textAlign="center"
-      >
-        <Box>
-          {/* <Heading as="h2" size="xl" mb={4}>About Me</Heading> */}
-          <MyHeading title="ABOUT ME" />
-          <Text fontSize="lg">
-            Here you can write a brief introduction about yourself.
-          </Text>
-        </Box>
       </Box>
     </>
   );
