@@ -1,4 +1,4 @@
-import { Box, Grid, Text } from "@chakra-ui/react";
+import { Box, Grid } from "@chakra-ui/react";
 import MyHeading from "./components/Heading";
 import { ProjectCard } from "./components/ProjectCard";
 

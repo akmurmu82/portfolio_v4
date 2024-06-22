@@ -23,10 +23,10 @@ export default function MyHeading({ title }) {
     >
       <Heading
         fontWeight="bold"
-        color="yellow.400"
+        color={theme.colors.secondary}
         position="relative"
         zIndex={1}
-        fontSize={{ base: "4xl", md: "6xl", lg: "8xl" }}
+        fontSize={{ base: "4xl", md: "4xl", lg: "6xl" }}
       >
         {title}
       </Heading>
@@ -37,12 +37,14 @@ export default function MyHeading({ title }) {
         position="absolute"
         top="0"
         left="50%"
-        transform="translate(-50%, -20%)"
+        transform="translate(-50%, -15%)"
         zIndex={0}
+        w={"100vh"}
+        // border={"1px solid"}
         // scale={5}
         // color="transparent"
         textShadow="0 0 2px yellow.400"
-        fontSize={{ base: "50px", md: "80px", lg: "100px" }}
+        fontSize={{ base: "50px", md: "80px", lg: "80px" }}
       >
         {title}
       </Heading>

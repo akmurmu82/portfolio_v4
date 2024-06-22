@@ -59,7 +59,7 @@ const skillsArr = [
   },
   {
     title: "Express",
-    img: "https://th.bing.com/th/id/OIP.Dbbsi4_1MA-1IGQRK894sQAAAA?rs=1&pid=ImgDetMain",
+    img: "https://th.bing.com/th/id/OIP.1fZjQpkRMKTBGN_7H5YnFwHaGL?rs=1&pid=ImgDetMain",
     key: "2",
   },
   {
@@ -85,7 +85,7 @@ function Skills() {
     <>
       <MyHeading title="SKILLS" />
       <Box
-        height="100vh"
+        height="50vh"
         display="flex"
         w={{ base: "90%", lg: "85%" }}
         justifyContent="center"

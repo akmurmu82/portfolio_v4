@@ -5,10 +5,12 @@ import {
   Image,
   Text,
   useColorModeValue,
+  useTheme,
 } from "@chakra-ui/react";
 import { FaCode, FaInfoCircle, FaLink } from "react-icons/fa";
 
 export const ProjectCard = ({ title, image }) => {
+  const theme = useTheme();
   const overlayBg = useColorModeValue(
     "rgba(0, 0, 0, 0.6)",
     "rgba(255, 255, 255, 0.6)"
@@ -50,20 +52,26 @@ export const ProjectCard = ({ title, image }) => {
         alignItems="center"
         justifyContent="center"
       >
-        <HStack spacing={4}>
+        <HStack spacing={6}>
           <IconButton
+            _hover={{ bg: "transparent" }}
             icon={<FaCode />}
-            colorScheme="yellow"
+            color={theme.colors.secondary}
+            bg={"transparent"}
             aria-label="Code"
           />
           <IconButton
+            _hover={{ bg: "transparent" }}
             icon={<FaLink />}
-            colorScheme="yellow"
+            color={theme.colors.secondary}
+            bg={"transparent"}
             aria-label="Link"
           />
           <IconButton
+            _hover={{ bg: "transparent" }}
             icon={<FaInfoCircle />}
-            colorScheme="yellow"
+            color={theme.colors.secondary}
+            bg={"transparent"}
             aria-label="Info"
           />
         </HStack>

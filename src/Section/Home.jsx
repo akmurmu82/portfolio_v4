@@ -34,7 +34,7 @@ function Home() {
             ml={5}
           />
           <Box maxW={{ base: "100%", lg: "60%" }}>
-            <Text as={"h1"} color={theme.colors.secondary} fontFamily={theme.fonts.subheading}>I&apos;M AMIT KUMAR MURMU</Text>
+            <Text fontSize={{base: '3xl', lg:'5xl'}} color={theme.colors.secondary} fontFamily={theme.fonts.subheading}>I&apos;M AMIT KUMAR MURMU</Text>
             {/* <MyHeading title="I'M AMIT KUMAR MURMU" /> */}
             <Text
               fontFamily={theme.fonts.text}
