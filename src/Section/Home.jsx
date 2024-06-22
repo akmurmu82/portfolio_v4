@@ -19,7 +19,6 @@ function Home() {
       >
         <Flex
           direction={{ base: "column", lg: "row" }} // Column layout on small screens, row layout on larger screens
-          // border={"1px solid"}
           w={"100%"}
           alignItems={"center"}
           justifyContent={"space-between"}
@@ -40,7 +39,7 @@ function Home() {
               fontFamily={theme.fonts.text}
               fontSize={{ base: "2xl", lg: "3xl" }}
               // fontWeight={"bold"}
-              
+
               mb={4}
             >
               A Software Developer
