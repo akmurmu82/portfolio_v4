@@ -11,13 +11,13 @@ function App() {
     <>
       <div className="App">
         <Navigation />
-        <div id="home">
+        <div id="home" style={{ position: "relative" }}>
           <Home />
         </div>
-        <div id="education">
+        <div id="education" style={{ position: "relative" }}>
           <Education />
         </div>
-        <div id="skills">
+        <div id="skills" style={{ position: "relative" }}>
           <Skills />
         </div>
         <div id="projects">

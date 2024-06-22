@@ -7,21 +7,17 @@ function Home() {
   return (
     <>
       <Box
-        height="100vh"
+        pt={5}
+        height="80vh"
         display="flex"
         justifyContent="center"
-        // p={"50px"}
-        // pr={{ base: "20px", lg: "100px" }}
-        // alignItems="center"
-        // bg={"green"}
-
         textAlign="center"
       >
         <Flex
           direction={{ base: "column", lg: "row" }} // Column layout on small screens, row layout on larger screens
           w={"100%"}
           alignItems={"center"}
-          justifyContent={"space-between"}
+          // justifyContent={"space-between"}
           gap={{ base: "20px", lg: "70px" }} // Spacing between items
           p={{ base: "10px", lg: "20px" }} // Padding
         >
@@ -34,13 +30,18 @@ function Home() {
             ml={5}
           />
           <Box maxW={{ base: "100%", lg: "60%" }}>
-            <Text fontSize={{base: '3xl', lg:'5xl'}} color={theme.colors.secondary} fontFamily={theme.fonts.subheading}>I&apos;M AMIT KUMAR MURMU</Text>
+            <Text
+              fontSize={{ base: "3xl", lg: "5xl" }}
+              color={theme.colors.secondary}
+              fontWeight={"bold"}
+              fontFamily={theme.fonts.subheading}
+            >
+              I&apos;M AMIT KUMAR MURMU
+            </Text>
             {/* <MyHeading title="I'M AMIT KUMAR MURMU" /> */}
             <Text
               fontFamily={theme.fonts.text}
               fontSize={{ base: "2xl", lg: "3xl" }}
-              // fontWeight={"bold"}
-
               mb={4}
             >
               A Software Developer

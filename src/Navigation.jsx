@@ -7,27 +7,6 @@ import { GrProjects } from "react-icons/gr";
 import { IoIosMailOpen } from "react-icons/io";
 import ThemeToggleButton from "./components/ThemeToggleButton";
 
-function MenuItem({ onClick, icon, isActive }) {
-  const theme = useTheme();
-
-  return (
-    <IconButton
-      onClick={onClick}
-      isRound={true}
-      _hover={{ bg: theme.colors.secondary }}
-      aria-label="Navigate to section"
-      fontSize={{ base: "20px", lg: "20px" }}
-      icon={
-        <Box padding={5} color={"white"}>
-          {icon}
-        </Box>
-      }
-      bg={isActive ? "secondary" : "#333"}
-      h={"auto"}
-    />
-  );
-}
-
 function Navigation() {
   const [activeSection, setActiveSection] = useState("");
 
@@ -68,11 +47,12 @@ function Navigation() {
   return (
     <Box
       position="fixed"
-      bottom={{ base: 2, lg: "auto" }}
+      bottom={{ base: 0, lg: "auto" }}
       right={{ base: 0, lg: 0 }}
       width={{ base: "100%", lg: "auto" }}
       backgroundColor="transparent"
       height={{ base: "auto", lg: "100vh" }}
+      // border='1px solid'
       padding={{ base: 1, lg: 4 }}
       display="flex"
       zIndex={10}
@@ -118,3 +98,24 @@ function Navigation() {
 }
 
 export default Navigation;
+
+function MenuItem({ onClick, icon, isActive }) {
+  const theme = useTheme();
+
+  return (
+    <IconButton
+      onClick={onClick}
+      isRound={true}
+      _hover={{ bg: theme.colors.secondary }}
+      aria-label="Navigate to section"
+      fontSize={{ base: "20px", lg: "20px" }}
+      icon={
+        <Box padding={5} color={"white"}>
+          {icon}
+        </Box>
+      }
+      bg={isActive ? "secondary" : "#333"}
+      h={"auto"}
+    />
+  );
+}

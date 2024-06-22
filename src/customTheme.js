@@ -10,7 +10,7 @@ export const myTheme = extendTheme({
     anek: "'Anek Devanagari', sans-serif",
     subheading: "'Kanit', sans-serif",
     text: "'Titillium Web', sans-serif",
-
+    outline: "'Londrina Outline', sans-serif",
     // Add more font definitions
   },
   button: {

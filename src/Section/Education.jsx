@@ -1,16 +1,5 @@
 import MyHeading from "./components/Heading";
-import {
-  Box,
-  Heading,
-  Text,
-  VStack,
-  Icon,
-  HStack,
-  useTheme,
-  Image,
-  Flex,
-} from "@chakra-ui/react";
-import { FaGraduationCap, FaMapMarkerAlt, FaUniversity } from "react-icons/fa";
+import { Box, VStack, useTheme, Image, Flex } from "@chakra-ui/react";
 import EducationCard from "./components/EducationCard";
 
 function Education() {
@@ -27,7 +16,7 @@ function Education() {
         w={{ base: "90%", lg: "85%" }}
         m={"auto"}
         gap={10}
-        direction={{base: 'column', lg: 'row'}}
+        direction={{ base: "column", lg: "row" }}
       >
         <Box
           w={{ base: "90%", lg: "40%" }} // Set maximum width of the image
