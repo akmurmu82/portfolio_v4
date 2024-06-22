@@ -1,9 +1,18 @@
 import MyHeading from "./components/Heading";
-import { Box, Text, Flex, Image, Button, useTheme } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  Flex,
+  Image,
+  Button,
+  useTheme,
+  Icon,
+} from "@chakra-ui/react";
 import { FaDownload } from "react-icons/fa";
 
 function Home() {
   const theme = useTheme();
+  function downloadResume() {}
   return (
     <>
       <Box
@@ -25,12 +34,12 @@ function Home() {
             alignSelf={{ base: "center", lg: "initial" }}
             borderRadius={"73% 27% 70% 30% / 30% 45% 55% 70% "}
             boxShadow={"-10px 6px 0px 8px rgba(191,176,176,0.75)"}
-            w={{ base: "90%", lg: "30%" }}
+            w={{ base: "60%", lg: "30%" }}
             ml={5}
           />
           <Box maxW={{ base: "100%", lg: "60%" }}>
             <Text
-              fontSize={{ base: "3xl", lg: "5xl" }}
+              fontSize={{ base: "2xl", lg: "5xl" }}
               color={theme.colors.jhataak}
               fontWeight={"bold"}
               fontFamily={theme.fonts.subheading}
@@ -40,7 +49,8 @@ function Home() {
             {/* <MyHeading title="I'M AMIT KUMAR MURMU" /> */}
             <Text
               fontFamily={theme.fonts.text}
-              fontSize={{ base: "2xl", lg: "3xl" }}
+              fontSize={{ base: "xl", lg: "3xl" }}
+              fontWeight={"bold"}
               mb={4}
             >
               A Software Developer
@@ -57,12 +67,18 @@ function Home() {
               Express, React, Node.js, and various other libraries.
             </Text>
             <Button
-              _hover={{ backgroundColor: theme.colors.secondary }}
+              _hover={{ backgroundColor: theme.colors.jhataak }}
               style={{ ...theme.button }}
+              // onClick={downloadResume}
+              as="a"
+              target="_blank"
+              href="/Amit Kumar Murmu-Resume.pdf"
+              // download
               fontSize={{ base: 20, lg: 14 }}
               m={"20px"}
+              rightIcon={<Icon as={FaDownload} />}
             >
-              DOWNLOAD CV <FaDownload />
+              DOWNLOAD CV
             </Button>
           </Box>
         </Flex>

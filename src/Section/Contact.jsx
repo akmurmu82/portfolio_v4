@@ -115,13 +115,13 @@ const GetInTouch = () => {
             </Heading>
             <form>
               <Flex direction="column" gap={3}>
-                <Input placeholder="YOUR NAME *" bg="#333" border="none" />
-                <Input placeholder="YOUR NUMBER" bg="#333" border="none" />
-                <Input placeholder="YOUR SUBJECT *" bg="#333" border="none" />
-                <Input placeholder="YOUR EMAIL *" bg="#333" border="none" />
+                <Input placeholder="YOUR NAME *" bg={theme.colors.light} border="none" />
+                <Input placeholder="YOUR NUMBER" bg={theme.colors.light} border="none" />
+                <Input placeholder="YOUR SUBJECT *" bg={theme.colors.light} border="none" />
+                <Input placeholder="YOUR EMAIL *" bg={theme.colors.light} border="none" />
                 <Textarea
                   placeholder="YOUR MESSAGE *"
-                  bg="#333"
+                  bg={theme.colors.light}
                   border="none"
                   rows={6}
                 />

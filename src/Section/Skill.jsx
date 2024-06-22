@@ -85,7 +85,7 @@ function Skills() {
     <>
       <MyHeading title="SKILLS" />
       <Box
-        height="50vh"
+        // height="50vh"
         display="flex"
         w={{ base: "90%", lg: "85%" }}
         justifyContent="center"
