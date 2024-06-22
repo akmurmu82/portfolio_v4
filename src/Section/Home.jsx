@@ -31,7 +31,7 @@ function Home() {
           <Box maxW={{ base: "100%", lg: "60%" }}>
             <Text
               fontSize={{ base: "3xl", lg: "5xl" }}
-              color={theme.colors.secondary}
+              color={theme.colors.jhataak}
               fontWeight={"bold"}
               fontFamily={theme.fonts.subheading}
             >

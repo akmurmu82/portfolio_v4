@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, useTheme } from "@chakra-ui/react";
 import "./App.css";
 import Navigation from "./Navigation";
 import Contact from "./Section/Contact";
@@ -10,9 +10,10 @@ import { useContext } from "react";
 import { ThemeContext } from "./AllContext";
 
 function App() {
+  const theme = useTheme()
   const { isDark } = useContext(ThemeContext);
   return (
-    <Box bg={isDark ? "#000" : "#fff"} color={isDark?'#fff':'#000'}>
+    <Box bg={isDark ? "#000" : "#fff"} color={isDark?theme.colors.light:theme.colors.dark}>
       <div className="App">
         <Navigation />
         <div id="home" style={{ position: "relative" }}>

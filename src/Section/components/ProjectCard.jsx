@@ -12,6 +12,7 @@ import { FaCode, FaInfoCircle, FaLink } from "react-icons/fa";
 export const ProjectCard = ({ title, image }) => {
   const theme = useTheme();
   const overlayBg = useColorModeValue(
+    // "#eeeeee",
     "rgba(0, 0, 0, 0.6)",
     "rgba(255, 255, 255, 0.6)"
   );
@@ -56,21 +57,24 @@ export const ProjectCard = ({ title, image }) => {
           <IconButton
             _hover={{ bg: "transparent" }}
             icon={<FaCode />}
-            color={theme.colors.secondary}
+            color={theme.colors.jhataak}
+            fontSize={20}
             bg={"transparent"}
             aria-label="Code"
           />
           <IconButton
             _hover={{ bg: "transparent" }}
             icon={<FaLink />}
-            color={theme.colors.secondary}
+            color={theme.colors.jhataak}
+            fontSize={20}
             bg={"transparent"}
             aria-label="Link"
           />
           <IconButton
             _hover={{ bg: "transparent" }}
             icon={<FaInfoCircle />}
-            color={theme.colors.secondary}
+            color={theme.colors.jhataak}
+            fontSize={20}
             bg={"transparent"}
             aria-label="Info"
           />

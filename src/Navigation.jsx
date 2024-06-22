@@ -105,15 +105,12 @@ function MenuItem({ onClick, icon, isActive }) {
     <IconButton
       onClick={onClick}
       isRound={true}
+      boxShadow={"rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px"}
       _hover={{ bg: theme.colors.secondary }}
       aria-label="Navigate to section"
       fontSize={{ base: "20px", lg: "20px" }}
-      icon={
-        <Box padding={5} color={"white"}>
-          {icon}
-        </Box>
-      }
-      bg={isActive ? "secondary" : "#333"}
+      icon={<Box padding={5}>{icon}</Box>}
+      bg={isActive ? theme.colors.jhataak : "#f3f3f3"}
       h={"auto"}
     />
   );

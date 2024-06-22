@@ -8,7 +8,7 @@ function SkillCard({ img, title, key }) {
       key={key}
       borderRadius={20}
       p={"10px 20px"}
-      bg={"#fff"}
+      bg={"#eeeeee"}
       gap={2}
       color={"#000"}
       align={"center"}

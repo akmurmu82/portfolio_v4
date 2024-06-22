@@ -1,13 +1,16 @@
 import { Box, Text, useTheme } from "@chakra-ui/react";
+import { useContext } from "react";
+import { ThemeContext } from "../../AllContext";
 
 const MyHeading = ({ title }) => {
+  const { isDark } = useContext(ThemeContext);
   const theme = useTheme();
   return (
     <Box position="relative" display="inline-block" textAlign="center" w="100%">
       <Text
         fontSize={{ base: "3xl", lg: "6xl" }}
         fontWeight="bold"
-        color={theme.colors.secondary}
+        color={theme.colors.jhataak}
         position="relative"
         zIndex={1}
         p={10}
