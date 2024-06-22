@@ -90,6 +90,7 @@ function Skills() {
         w={{ base: "90%", lg: "85%" }}
         justifyContent="center"
         m={"auto"}
+        pb={50}
         textAlign="center"
       >
         <Box>

@@ -10,17 +10,13 @@ function Education() {
       <Flex
         color="white"
         align={"center"}
-        minH="100vh"
-        // border={"1px solid"}
-        p={0}
         w={{ base: "90%", lg: "85%" }}
         m={"auto"}
         gap={10}
         direction={{ base: "column", lg: "row" }}
       >
         <Box
-          w={{ base: "90%", lg: "40%" }} // Set maximum width of the image
-          // border="1px solid"
+          w={{ base: "90%", lg: "40%" }}
         >
           <Image
             src="https://www.bing.com/images/blob?bcid=RGWBTJ66sSwHhxBgCox90Z-Bt-9J.....xw"

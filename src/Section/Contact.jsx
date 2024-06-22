@@ -23,7 +23,7 @@ const GetInTouch = () => {
       <MyHeading title="GET IN TOUCH" />
       <Box
         color="white"
-        py={10}
+        pb={100}
         px={5}
         w={{ base: "90%", lg: "85%" }}
         m={"auto"}

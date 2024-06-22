@@ -14,19 +14,18 @@ function Home() {
         textAlign="center"
       >
         <Flex
-          direction={{ base: "column", lg: "row" }} // Column layout on small screens, row layout on larger screens
+          direction={{ base: "column", lg: "row" }}
           w={"100%"}
           alignItems={"center"}
-          // justifyContent={"space-between"}
-          gap={{ base: "20px", lg: "70px" }} // Spacing between items
-          p={{ base: "10px", lg: "20px" }} // Padding
+          gap={{ base: "20px", lg: "70px" }}
+          p={{ base: "10px", lg: "20px" }}
         >
           <Image
             src="https://avatars.githubusercontent.com/u/66897228?s=400&u=17b4c06be92a9b164cacca77427ba77fb2dd7a0d&v=4"
-            alignSelf={{ base: "center", lg: "initial" }} // Align the image to the center on small screens, initial alignment on larger screens
+            alignSelf={{ base: "center", lg: "initial" }}
             borderRadius={"73% 27% 70% 30% / 30% 45% 55% 70% "}
             boxShadow={"-10px 6px 0px 8px rgba(191,176,176,0.75)"}
-            w={{ base: "90%", lg: "30%" }} // Set maximum width of the image
+            w={{ base: "90%", lg: "30%" }}
             ml={5}
           />
           <Box maxW={{ base: "100%", lg: "60%" }}>

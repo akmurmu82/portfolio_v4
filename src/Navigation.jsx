@@ -52,7 +52,6 @@ function Navigation() {
       width={{ base: "100%", lg: "auto" }}
       backgroundColor="transparent"
       height={{ base: "auto", lg: "100vh" }}
-      // border='1px solid'
       padding={{ base: 1, lg: 4 }}
       display="flex"
       zIndex={10}
