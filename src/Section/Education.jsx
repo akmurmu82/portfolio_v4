@@ -1,6 +1,7 @@
 import MyHeading from "./components/Heading";
 import { Box, VStack, useTheme, Image, Flex } from "@chakra-ui/react";
 import EducationCard from "./components/EducationCard";
+import edu from "../images/edu.jpg";
 
 function Education() {
   const theme = useTheme();
@@ -15,11 +16,9 @@ function Education() {
         gap={10}
         direction={{ base: "column", lg: "row" }}
       >
-        <Box
-          w={{ base: "90%", lg: "40%" }}
-        >
+        <Box w={{ base: "90%", lg: "40%" }}>
           <Image
-            src="https://www.bing.com/images/blob?bcid=RGWBTJ66sSwHhxBgCox90Z-Bt-9J.....xw"
+            src={edu}
             alignSelf={{ base: "center", lg: "initial" }} // Align the image to the center on small screens, initial alignment on larger screens
           />
         </Box>
