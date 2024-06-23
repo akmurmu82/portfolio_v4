@@ -17,7 +17,7 @@ function Home() {
     <>
       <Box
         pt={5}
-        height="80vh"
+        // height="80vh"
         display="flex"
         justifyContent="center"
         textAlign="center"

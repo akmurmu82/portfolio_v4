@@ -1,19 +1,23 @@
-import { Box, Text, Button } from "@chakra-ui/react";
+import { Box, Text, Button, useTheme, HStack } from "@chakra-ui/react";
 
 const CustomToast = ({ title, description, onClose }) => {
+  const theme = useTheme();
+  // const { isDark } = useContext(ThemeContext);
   return (
     <Box
       p={3}
-      bg="gray.700"
       color="white"
       borderRadius="md"
+      bg={theme.colors.dark}
       boxShadow="lg"
     >
-      <Text fontWeight="bold">{title}</Text>
+      <HStack justifyContent={"space-between"}>
+        <Text fontWeight="bold">{title}</Text>
+        <Button size="sm" mt={2} onClick={onClose}>
+          Close
+        </Button>
+      </HStack>
       <Text>{description}</Text>
-      <Button size="sm" mt={2} onClick={onClose}>
-        Close
-      </Button>
     </Box>
   );
 };

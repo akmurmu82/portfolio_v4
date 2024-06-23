@@ -176,7 +176,7 @@ const GetInTouch = () => {
             </Heading>
 
             <form onSubmit={handleSubmit}>
-              <Flex direction="column" gap={3}>
+              <Flex direction="column" gap={3} color="#000">
                 <Input
                   required
                   placeholder="YOUR NAME *"
