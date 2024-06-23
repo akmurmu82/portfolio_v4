@@ -13,6 +13,7 @@ import {
   useTheme,
   VStack,
   useToast,
+  HStack,
 } from "@chakra-ui/react";
 import { EmailIcon } from "@chakra-ui/icons";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
@@ -177,6 +178,7 @@ const GetInTouch = () => {
             <form onSubmit={handleSubmit}>
               <Flex direction="column" gap={3}>
                 <Input
+                  required
                   placeholder="YOUR NAME *"
                   name="name"
                   value={formData.name}
@@ -185,7 +187,8 @@ const GetInTouch = () => {
                   onChange={handleChange}
                 />
                 <Input
-                  placeholder="YOUR NUMBER"
+                  required
+                  placeholder="YOUR NUMBER *"
                   name="number"
                   value={formData.number}
                   bg={theme.colors.light}
@@ -193,7 +196,7 @@ const GetInTouch = () => {
                   onChange={handleChange}
                 />
                 <Input
-                  placeholder="YOUR SUBJECT *"
+                  placeholder="YOUR SUBJECT"
                   name="subject"
                   value={formData.subject}
                   bg={theme.colors.light}
@@ -201,6 +204,7 @@ const GetInTouch = () => {
                   onChange={handleChange}
                 />
                 <Input
+                  required
                   placeholder="YOUR EMAIL *"
                   name="email"
                   value={formData.email}
@@ -217,15 +221,20 @@ const GetInTouch = () => {
                   onChange={handleChange}
                   rows={6}
                 />
-                <Button
-                  rightIcon={<Icon as={IoIosSend} />}
-                  colorScheme="yellow"
-                  type="submit"
-                  bg={theme.colors.jhataak}
-                  alignSelf="flex-start"
-                >
-                  SEND MESSAGE
-                </Button>
+                <HStack>
+                  <Button
+                    rightIcon={<Icon as={IoIosSend} />}
+                    colorScheme="yellow"
+                    type="submit"
+                    bg={theme.colors.jhataak}
+                    alignSelf="flex-start"
+                  >
+                    SEND MESSAGE
+                  </Button>
+                  <Text color={"red"} as={"bold"}>
+                    * marked fields are must
+                  </Text>
+                </HStack>
               </Flex>
             </form>
           </Box>
