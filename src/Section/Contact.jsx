@@ -1,4 +1,5 @@
-import React, { useContext } from "react";
+import { useContext, useState } from "react";
+import emailjs from "emailjs-com";
 import {
   Box,
   Flex,
@@ -10,19 +11,78 @@ import {
   Icon,
   Link,
   useTheme,
-  HStack,
   VStack,
+  useToast,
 } from "@chakra-ui/react";
 import { EmailIcon } from "@chakra-ui/icons";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { MdLocationOn, MdSend } from "react-icons/md";
+import { MdLocationOn } from "react-icons/md";
 import MyHeading from "./components/Heading";
 import { ThemeContext } from "../AllContext";
 import { IoIosSend } from "react-icons/io";
+import CustomToast from "./components/CustomToast";
 
 const GetInTouch = () => {
   const { isDark } = useContext(ThemeContext);
   const theme = useTheme();
+  const toast = useToast();
+  const [formData, setFormData] = useState({
+    name: "",
+    number: "",
+    subject: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_86yi4br",
+        "template_s7kkrds",
+        e.target,
+        "Yr50FP_5lajaEFbZp"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          toast({
+            position: "top",
+            duration: 5000,
+            isClosable: true,
+            render: ({ onClose }) => (
+              <CustomToast
+                title="Feedback Sent"
+                description="Thanks for your feedback. I'll sure reply to this."
+                onClose={onClose}
+              />
+            ),
+          });
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Failed to send the message. Please try again.");
+        }
+      );
+
+    // Reset form fields
+    setFormData({
+      name: "",
+      number: "",
+      subject: "",
+      email: "",
+      message: "",
+    });
+  };
   return (
     <>
       <MyHeading title="GET IN TOUCH" />
@@ -113,21 +173,54 @@ const GetInTouch = () => {
             <Heading as="h2" size="lg" mb={5}>
               Message me
             </Heading>
-            <form>
+
+            <form onSubmit={handleSubmit}>
               <Flex direction="column" gap={3}>
-                <Input placeholder="YOUR NAME *" bg={theme.colors.light} border="none" />
-                <Input placeholder="YOUR NUMBER" bg={theme.colors.light} border="none" />
-                <Input placeholder="YOUR SUBJECT *" bg={theme.colors.light} border="none" />
-                <Input placeholder="YOUR EMAIL *" bg={theme.colors.light} border="none" />
-                <Textarea
-                  placeholder="YOUR MESSAGE *"
+                <Input
+                  placeholder="YOUR NAME *"
+                  name="name"
+                  value={formData.name}
                   bg={theme.colors.light}
                   border="none"
+                  onChange={handleChange}
+                />
+                <Input
+                  placeholder="YOUR NUMBER"
+                  name="number"
+                  value={formData.number}
+                  bg={theme.colors.light}
+                  border="none"
+                  onChange={handleChange}
+                />
+                <Input
+                  placeholder="YOUR SUBJECT *"
+                  name="subject"
+                  value={formData.subject}
+                  bg={theme.colors.light}
+                  border="none"
+                  onChange={handleChange}
+                />
+                <Input
+                  placeholder="YOUR EMAIL *"
+                  name="email"
+                  value={formData.email}
+                  bg={theme.colors.light}
+                  border="none"
+                  onChange={handleChange}
+                />
+                <Textarea
+                  placeholder="YOUR MESSAGE *"
+                  name="message"
+                  value={formData.message}
+                  bg={theme.colors.light}
+                  border="none"
+                  onChange={handleChange}
                   rows={6}
                 />
                 <Button
                   rightIcon={<Icon as={IoIosSend} />}
                   colorScheme="yellow"
+                  type="submit"
                   bg={theme.colors.jhataak}
                   alignSelf="flex-start"
                 >

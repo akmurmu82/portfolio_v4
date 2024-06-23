@@ -53,7 +53,7 @@ function Home() {
               fontWeight={"bold"}
               mb={4}
             >
-              A Software Developer
+              A Full Stack Developer
             </Text>
             <Text
               fontSize={{ base: "lg", lg: "23px" }}
