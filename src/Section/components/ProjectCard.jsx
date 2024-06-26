@@ -1,16 +1,25 @@
 import {
   Box,
+  Button,
   HStack,
   IconButton,
   Image,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
   Text,
   useColorModeValue,
+  useDisclosure,
   useTheme,
 } from "@chakra-ui/react";
 import { FaCode, FaInfoCircle, FaLink } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-export const ProjectCard = ({ title, image }) => {
+export const ProjectCard = ({ title, image, ghLink, liveLink, info, onClose, isOpen }) => {
   const theme = useTheme();
   const overlayBg = useColorModeValue(
     // "#eeeeee",
@@ -46,6 +55,23 @@ export const ProjectCard = ({ title, image }) => {
         >
           {title}
         </Text>
+
+        <Modal isOpen={isOpen} onClose={onClose}>
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>Modal Title</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>{/* <Lorem count={2} /> */}asdfg</ModalBody>
+
+            <ModalFooter>
+              <Button colorScheme="blue" mr={3} onClick={onClose}>
+                Close
+              </Button>
+              <Button variant="ghost">Secondary Action</Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+
         <Box
           position="absolute"
           top={0}
@@ -61,22 +87,26 @@ export const ProjectCard = ({ title, image }) => {
           justifyContent="center"
         >
           <HStack spacing={6}>
-            <IconButton
-              _hover={{ bg: "transparent" }}
-              icon={<FaCode />}
-              color={theme.colors.jhataak}
-              fontSize={20}
-              bg={"transparent"}
-              aria-label="Code"
-            />
-            <IconButton
-              _hover={{ bg: "transparent" }}
-              icon={<FaLink />}
-              color={theme.colors.jhataak}
-              fontSize={20}
-              bg={"transparent"}
-              aria-label="Link"
-            />
+            <a href={ghLink} target="_blank" rel="noopener noreferrer">
+              <IconButton
+                _hover={{ bg: "transparent" }}
+                icon={<FaCode />}
+                color={theme.colors.jhataak}
+                fontSize={20}
+                bg={"transparent"}
+                aria-label="Code"
+              />
+            </a>
+            <a href={liveLink} target="_blank" rel="noopener noreferrer">
+              <IconButton
+                _hover={{ bg: "transparent" }}
+                icon={<FaLink />}
+                color={theme.colors.jhataak}
+                fontSize={20}
+                bg={"transparent"}
+                aria-label="Link"
+              />
+            </a>
             <IconButton
               _hover={{ bg: "transparent" }}
               icon={<FaInfoCircle />}
@@ -84,6 +114,7 @@ export const ProjectCard = ({ title, image }) => {
               fontSize={20}
               bg={"transparent"}
               aria-label="Info"
+              onClick={info}
             />
           </HStack>
         </Box>
