@@ -1,31 +1,33 @@
 import {
   Box,
-  Button,
   HStack,
   IconButton,
   Image,
-  Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalFooter,
-  ModalHeader,
-  ModalOverlay,
   Text,
   useColorModeValue,
-  useDisclosure,
   useTheme,
 } from "@chakra-ui/react";
-import { FaCode, FaInfoCircle, FaLink } from "react-icons/fa";
+import { FaGithub, FaInfoCircle } from "react-icons/fa";
+import { GoLinkExternal } from "react-icons/go";
+
 import { motion } from "framer-motion";
 
-export const ProjectCard = ({ title, image, ghLink, liveLink, info, onClose, isOpen }) => {
+export const ProjectCard = ({
+  title,
+  image,
+  ghLink,
+  liveLink,
+  description,
+  info,
+  isOpen,
+  onClose,
+}) => {
   const theme = useTheme();
   const overlayBg = useColorModeValue(
-    // "#eeeeee",
     "rgba(0, 0, 0, 0.6)",
     "rgba(255, 255, 255, 0.6)"
   );
+
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0 }}
@@ -55,23 +57,6 @@ export const ProjectCard = ({ title, image, ghLink, liveLink, info, onClose, isO
         >
           {title}
         </Text>
-
-        <Modal isOpen={isOpen} onClose={onClose}>
-          <ModalOverlay />
-          <ModalContent>
-            <ModalHeader>Modal Title</ModalHeader>
-            <ModalCloseButton />
-            <ModalBody>{/* <Lorem count={2} /> */}asdfg</ModalBody>
-
-            <ModalFooter>
-              <Button colorScheme="blue" mr={3} onClick={onClose}>
-                Close
-              </Button>
-              <Button variant="ghost">Secondary Action</Button>
-            </ModalFooter>
-          </ModalContent>
-        </Modal>
-
         <Box
           position="absolute"
           top={0}
@@ -81,18 +66,19 @@ export const ProjectCard = ({ title, image, ghLink, liveLink, info, onClose, isO
           bg={overlayBg}
           opacity={0}
           transition="opacity 0.3s"
+          border={"1px solid"}
           _hover={{ opacity: 1 }}
           display="flex"
-          alignItems="center"
+          alignItems="flex-end"
           justifyContent="center"
         >
-          <HStack spacing={6}>
+          <HStack spacing={6} pb={10}>
             <a href={ghLink} target="_blank" rel="noopener noreferrer">
               <IconButton
                 _hover={{ bg: "transparent" }}
-                icon={<FaCode />}
+                icon={<FaGithub />}
                 color={theme.colors.jhataak}
-                fontSize={20}
+                fontSize={30}
                 bg={"transparent"}
                 aria-label="Code"
               />
@@ -100,9 +86,9 @@ export const ProjectCard = ({ title, image, ghLink, liveLink, info, onClose, isO
             <a href={liveLink} target="_blank" rel="noopener noreferrer">
               <IconButton
                 _hover={{ bg: "transparent" }}
-                icon={<FaLink />}
+                icon={<GoLinkExternal />}
                 color={theme.colors.jhataak}
-                fontSize={20}
+                fontSize={30}
                 bg={"transparent"}
                 aria-label="Link"
               />
@@ -111,7 +97,7 @@ export const ProjectCard = ({ title, image, ghLink, liveLink, info, onClose, isO
               _hover={{ bg: "transparent" }}
               icon={<FaInfoCircle />}
               color={theme.colors.jhataak}
-              fontSize={20}
+              fontSize={30}
               bg={"transparent"}
               aria-label="Info"
               onClick={info}
