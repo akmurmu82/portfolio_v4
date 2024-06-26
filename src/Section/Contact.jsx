@@ -22,6 +22,7 @@ import MyHeading from "./components/Heading";
 import { ThemeContext } from "../AllContext";
 import { IoIosSend } from "react-icons/io";
 import CustomToast from "./components/CustomToast";
+import { motion } from "framer-motion";
 
 const GetInTouch = () => {
   const { isDark } = useContext(ThemeContext);
@@ -99,9 +100,16 @@ const GetInTouch = () => {
           justifyContent="space-around"
         >
           <Box w={{ base: "100%", md: "40%" }} mb={{ base: 10, md: 0 }}>
-            <Heading as="h2" size="lg" mb={5}>
-              DON&apos;T BE SHY!
-            </Heading>
+            <motion.div
+              initial={{ opacity: 0, x: -200 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              viewport={{ once: false }}
+            >
+              <Heading as="h2" size="lg" mb={5}>
+                DON&apos;T BE SHY!
+              </Heading>
+            </motion.div>
             <Text
               fontSize={{ base: "lg", lg: "20px" }}
               textAlign={"left"}
@@ -130,7 +138,7 @@ const GetInTouch = () => {
                 <EmailIcon w={7} h={10} color={theme.colors.jhataak} mr={5} />
                 <VStack alignItems={"flex-start"} gap={0}>
                   <Text>E-MAIL</Text>
-                  <Link href="mailto:sukantadeveloper7@gmail.com" isExternal>
+                  <Link href="mailto:amitkumar655921@gmail.com" isExternal>
                     amitkumar655921@gmail.com
                   </Link>
                 </VStack>
@@ -145,7 +153,7 @@ const GetInTouch = () => {
                 />
                 <VStack alignItems={"flex-start"} gap={0}>
                   <Text>GITHUB</Text>
-                  <Link href="https://github.com/akmurmu83" isExternal>
+                  <Link href="https://github.com/akmurmu82" isExternal>
                     akmurmu82
                   </Link>
                 </VStack>

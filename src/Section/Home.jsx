@@ -1,4 +1,3 @@
-import MyHeading from "./components/Heading";
 import {
   Box,
   Text,
@@ -9,10 +8,10 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import { FaDownload } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 function Home() {
   const theme = useTheme();
-  function downloadResume() {}
   return (
     <>
       <Box
@@ -38,23 +37,37 @@ function Home() {
             ml={5}
           />
           <Box maxW={{ base: "100%", lg: "60%" }}>
-            <Text
-              fontSize={{ base: "2xl", lg: "5xl" }}
-              color={theme.colors.jhataak}
-              fontWeight={"bold"}
-              fontFamily={theme.fonts.subheading}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: false }}
             >
-              I&apos;M AMIT KUMAR MURMU
-            </Text>
+              <Text
+                fontSize={{ base: "2xl", lg: "5xl" }}
+                color={theme.colors.jhataak}
+                fontWeight={"bold"}
+                fontFamily={theme.fonts.subheading}
+              >
+                I&apos;M AMIT KUMAR MURMU
+              </Text>
+            </motion.div>
             {/* <MyHeading title="I'M AMIT KUMAR MURMU" /> */}
-            <Text
-              fontFamily={theme.fonts.text}
-              fontSize={{ base: "xl", lg: "3xl" }}
-              fontWeight={"bold"}
-              mb={4}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              viewport={{ once: false }}
             >
-              A Full Stack Developer
-            </Text>
+              <Text
+                fontFamily={theme.fonts.text}
+                fontSize={{ base: "xl", lg: "3xl" }}
+                fontWeight={"bold"}
+                mb={4}
+              >
+                A Full Stack Developer
+              </Text>
+            </motion.div>
             <Text
               fontSize={{ base: "lg", lg: "23px" }}
               textAlign={"left"}
@@ -66,20 +79,27 @@ function Home() {
               applications using a technology stack that includes MongoDB,
               Express, React, Node.js, and various other libraries.
             </Text>
-            <Button
-              _hover={{ backgroundColor: theme.colors.jhataak }}
-              style={{ ...theme.button }}
-              // onClick={downloadResume}
-              as="a"
-              target="_blank"
-              href="/Amit Kumar Murmu-Resume.pdf"
-              // download
-              fontSize={{ base: 20, lg: 14 }}
-              m={"20px"}
-              rightIcon={<Icon as={FaDownload} />}
+            <motion.div
+              initial={{ opacity: 0, x: -200 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              viewport={{ once: false }}
             >
-              DOWNLOAD CV
-            </Button>
+              <Button
+                _hover={{ backgroundColor: theme.colors.jhataak }}
+                style={{ ...theme.button }}
+                // onClick={downloadResume}
+                as="a"
+                target="_blank"
+                href="/Amit Kumar Murmu-Resume.pdf"
+                // download
+                fontSize={{ base: 20, lg: 14 }}
+                m={"20px"}
+                rightIcon={<Icon as={FaDownload} />}
+              >
+                DOWNLOAD CV
+              </Button>
+            </motion.div>
           </Box>
         </Flex>
       </Box>

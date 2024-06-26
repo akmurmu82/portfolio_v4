@@ -11,24 +11,32 @@ import github from "../images/github.png";
 import express from "../images/express.jpg";
 import mongodb from "../images/mongodb.jpg";
 import redux from "../images/redux.jpg";
+import { motion } from "framer-motion";
 
-function SkillCard({ img, title, key }) {
+function SkillCard({ img, title, key, delay }) {
   const theme = useTheme();
   return (
-    <Flex
-      key={key}
-      borderRadius={20}
-      p={"4px 20px"}
-      bg={"#eeeeee"}
-      gap={2}
-      color={"#000"}
-      align={"center"}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.1, delay: delay }}
+      viewport={{ once: false }}
     >
-      <Image src={img} alt={title} w={10} h={12} />
-      <Text as={"bold"} fontFamily={theme.fonts.subheading}>
-        {title}
-      </Text>
-    </Flex>
+      <Flex
+        key={key}
+        borderRadius={20}
+        p={"4px 20px"}
+        bg={"#eeeeee"}
+        gap={2}
+        color={"#000"}
+        align={"center"}
+      >
+        <Image src={img} alt={title} w={10} h={12} />
+        <Text as={"bold"} fontFamily={theme.fonts.subheading}>
+          {title}
+        </Text>
+      </Flex>
+    </motion.div>
   );
 }
 
@@ -47,17 +55,17 @@ function Skills() {
       >
         <Box>
           <Flex gap={5} wrap={"wrap"}>
-            <SkillCard title="HTML" img={html} />
-            <SkillCard title="CSS" img={css} />
-            <SkillCard title="JavaScript" img={js} />
-            <SkillCard title="React" img={react} />
-            <SkillCard title="Redux" img={redux} />
-            <SkillCard title="chakraui" img={chakraui} />
-            <SkillCard title="Node.js" img={nodejs} />
-            <SkillCard title="Mongodb" img={mongodb} />
-            <SkillCard title="Express" img={express} />
-            <SkillCard title="GitHub" img={github} />
-            <SkillCard title="ChatGPT" img={chatgpt} />
+            <SkillCard title="HTML" img={html} delay={0.2} />
+            <SkillCard title="CSS" img={css} delay={0.3} />
+            <SkillCard title="JavaScript" img={js} delay={0.4} />
+            <SkillCard title="React" img={react} delay={0.5} />
+            <SkillCard title="Redux" img={redux} delay={0.6} />
+            <SkillCard title="chakraui" img={chakraui} delay={0.7} />
+            <SkillCard title="Node.js" img={nodejs} delay={0.8} />
+            <SkillCard title="Mongodb" img={mongodb} delay={0.9} />
+            <SkillCard title="Express" img={express} delay={1} />
+            <SkillCard title="GitHub" img={github} delay={1.1} />
+            <SkillCard title="ChatGPT" img={chatgpt} delay={1.2} />
           </Flex>
         </Box>
       </Box>

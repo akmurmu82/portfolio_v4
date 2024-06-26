@@ -1,4 +1,4 @@
-import { Box, Grid } from "@chakra-ui/react";
+import { Box, Grid, VStack } from "@chakra-ui/react";
 import MyHeading from "./components/Heading";
 import { ProjectCard } from "./components/ProjectCard";
 import interviewHub from "../images/InterviewHub.png";
@@ -8,7 +8,6 @@ import GroceryHub from "../images/GroceryHub.png";
 function Projects() {
   return (
     <Box
-      // height="100vh"
       display="flex"
       w={{ base: "90%", lg: "85%" }}
       justifyContent="center"
