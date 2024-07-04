@@ -17,7 +17,7 @@ import {
 } from "@chakra-ui/react";
 import { EmailIcon } from "@chakra-ui/icons";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { MdLocationOn } from "react-icons/md";
+import { MdLocationOn, MdOutlineLocationOn } from "react-icons/md";
 import MyHeading from "./components/Heading";
 import { ThemeContext } from "../AllContext";
 import { IoIosSend } from "react-icons/io";
@@ -120,8 +120,10 @@ const GetInTouch = () => {
               new projects, creative ideas or opportunities to be part of your
               visions.
             </Text>
+
             <Box mb={5}>
               <Flex align="center" mb={3}>
+                {/* <MdLocationOn w={7} h={10} color={theme.colors.jhataak} mr={5} /> */}
                 <Icon
                   as={MdLocationOn}
                   w={7}
@@ -179,9 +181,16 @@ const GetInTouch = () => {
             </Box>
           </Box>
           <Box w={{ base: "100%", md: "60%" }}>
-            <Heading as="h2" size="lg" mb={5}>
-              Message me
-            </Heading>
+            <motion.div
+              initial={{ opacity: 0, x: 400 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              viewport={{ once: false }}
+            >
+              <Heading as="h2" size="lg" mb={5}>
+                Message me
+              </Heading>
+            </motion.div>
 
             <form onSubmit={handleSubmit}>
               <Flex direction="column" gap={3} color="#000">

@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { FaDownload } from "react-icons/fa";
 import { motion } from "framer-motion";
+import profilePic from "../images/Profile_pic.jpg";
 
 function Home() {
   const theme = useTheme();
@@ -29,7 +30,7 @@ function Home() {
           p={{ base: "10px", lg: "20px" }}
         >
           <Image
-            src="https://avatars.githubusercontent.com/u/66897228?s=400&u=17b4c06be92a9b164cacca77427ba77fb2dd7a0d&v=4"
+            src={profilePic}
             alignSelf={{ base: "center", lg: "initial" }}
             borderRadius={"73% 27% 70% 30% / 30% 45% 55% 70% "}
             boxShadow={"-10px 6px 0px 8px rgba(191,176,176,0.75)"}
