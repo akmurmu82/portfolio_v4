@@ -24,7 +24,7 @@ function Education() {
         </Box>
         <VStack spacing={10} align="left">
           <EducationCard
-            duration={"2023 - 2024"}
+            duration={"2023 - Present"}
             course={"Full Stack Web Development"}
             institute={"Masai"}
             location={"Bengaluru"}
