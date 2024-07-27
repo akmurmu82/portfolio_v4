@@ -101,7 +101,7 @@ const GetInTouch = () => {
         >
           <Box w={{ base: "100%", md: "40%" }} mb={{ base: 10, md: 0 }}>
             <motion.div
-              initial={{ opacity: 0, x: -200 }}
+              initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
               viewport={{ once: false }}
@@ -182,7 +182,7 @@ const GetInTouch = () => {
           </Box>
           <Box w={{ base: "100%", md: "60%" }}>
             <motion.div
-              initial={{ opacity: 0, x: 400 }}
+              initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
               viewport={{ once: false }}
