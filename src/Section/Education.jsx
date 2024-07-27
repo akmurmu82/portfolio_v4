@@ -1,10 +1,9 @@
 import MyHeading from "./components/Heading";
-import { Box, VStack, useTheme, Image, Flex } from "@chakra-ui/react";
+import { Box, VStack, Image, Flex } from "@chakra-ui/react";
 import EducationCard from "./components/EducationCard";
 import edu from "../images/edu.jpg";
 
 function Education() {
-  const theme = useTheme();
   return (
     <>
       <MyHeading title="EDUCATION" />
@@ -24,7 +23,7 @@ function Education() {
         </Box>
         <VStack spacing={10} align="left">
           <EducationCard
-            duration={"2023 - 2024"}
+            duration={"2023 - Present"}
             course={"Full Stack Web Development"}
             institute={"Masai"}
             location={"Bengaluru"}

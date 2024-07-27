@@ -13,13 +13,19 @@ function EducationCard({ duration, course, institute, location }) {
       transition={{ duration: 0.5, delay: 0.4 }}
       viewport={{ once: false }}
     >
-      <HStack align="start" spacing={2}>
+      <HStack alignItems="flex-start" spacing={5}>
         <VStack spacing={0}>
           <Icon as={FaGraduationCap} boxSize={10} color="yellow.400" />
-          <Box h="100px" borderLeft="2px dashed" borderColor="yellow.400" />
+          <Box h="115px" borderLeft="2px dashed" borderColor="yellow.400" />
         </VStack>
         <VStack align={"start"} color={isDark ? "#f6f6f6" : "#333"}>
-          <Text p={"0 15px"} bg={"#eeeeee"} borderRadius={20} color={"#333"}>
+          <Text
+            fontWeight={"semibold"}
+            p={"5px 20px"}
+            bg={"#eeeeee"}
+            borderRadius={20}
+            color={"#333"}
+          >
             {duration}
           </Text>
           <HStack spacing={3}>
@@ -27,13 +33,13 @@ function EducationCard({ duration, course, institute, location }) {
               {course}
             </Heading>
           </HStack>
-          <HStack spacing={3}>
+          <HStack fontSize={23} spacing={3}>
             <Icon as={FaUniversity} />
-            <Text>{institute}</Text>
+            <Text fontWeight={"semibold"}>{institute}</Text>
           </HStack>
-          <HStack spacing={3}>
+          <HStack fontSize={23} spacing={3}>
             <Icon as={FaMapMarkerAlt} />
-            <Text>{location}</Text>
+            <Text fontWeight={"semibold"}>{location}</Text>
           </HStack>
         </VStack>
       </HStack>
