@@ -32,7 +32,7 @@ function SkillCard({ img, title, key, delay }) {
         align={"center"}
       >
         <Image src={img} alt={title} w={10} h={12} />
-        <Text as={"bold"} fontFamily={theme.fonts.subheading}>
+        <Text fontWeight={"semibold"} fontFamily={theme.fonts.subheading}>
           {title}
         </Text>
       </Flex>
