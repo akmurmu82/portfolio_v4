@@ -21,6 +21,7 @@ import { ProjectCard } from "./components/ProjectCard";
 import interviewHub from "../images/InterviewHub.png";
 import Todoist from "../images/Todoist.png";
 import GroceryHub from "../images/GroceryHub.png";
+import HowWellDoYouKnowMe from "../images/HowWellDoYouKnowMe.png";
 import { FaGithub } from "react-icons/fa";
 import { GoLinkExternal } from "react-icons/go";
 
@@ -63,6 +64,18 @@ const projectDetails = {
       techStack: "HTML, CSS, Java Script, JSON server",
     },
   },
+  howWellDoYouKnowMe: {
+    title: "How Well Do You Know Me",
+    image: HowWellDoYouKnowMe, // replace this with the appropriate image variable or path
+    ghLink: "https://github.com/akmurmu82/HowWellDoYouKnowMe", // update if needed
+    liveLink: "https://howwelldoyouknowme2.vercel.app/", // replace with the actual live link
+    description: "An interactive quiz app where I can test how well my friends know me.",
+    details: {
+      features: "User login, personalized quiz, scoring system, dynamic leaderboard, downloadable certificates",
+      responsibility: "Implemented the frontend with React, designed the database schema.",
+      techStack: "React, Chakra UI, Node.js, Express, MongoDB",
+    },
+  },  
 };
 
 function Projects() {
